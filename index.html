@@ -28,21 +28,17 @@
 
   /* カード */
   .card { border-radius:12px; padding:18px 20px; margin-bottom:12px; }
-  .card-grid { display:grid; gap:12px; margin-top:14px; }
-  .card-grid-2 { grid-template-columns:1fr 1fr; }
+  .alert-box { background:#fff1f2; border:1px solid #fecdd3; border-radius:12px; padding:16px 20px; margin-bottom:20px; font-size:13px; color:#9f1239; line-height:1.7; }
 
   /* ステップ */
-  .step-list { display:flex; flex-direction:column; gap:12px; margin-top:14px; }
-  .step-item { display:flex; gap:14px; align-items:flex-start; }
+  .step-list { display:flex; flex-direction:column; gap:16px; margin-top:14px; }
+  .step-item { display:flex; gap:14px; align-items:flex-start; background:#f8fafc; padding:16px; border-radius:10px; border:1px solid #e2e8f0; }
   .step-num { width:28px; height:28px; min-width:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; margin-top:2px; }
-  .step-content .step-title { font-size:14px; font-weight:700; margin-bottom:4px; }
-  .step-content .step-desc { font-size:13px; color:#555; line-height:1.7; }
+  .step-content .step-title { font-size:14px; font-weight:700; margin-bottom:6px; color:#0c1445; }
+  .step-content .step-desc { font-size:13px; color:#475569; line-height:1.7; }
 
   /* まとめ */
   .summary-box { border-radius:14px; padding:24px 28px; margin-top:28px; }
-
-  /* ユーティリティ */
-  .bg-yellow-light { background:#fefce8; border:1px solid #fde047; }
 
   /* ===== テーマ: ネイビー ===== */
   .theme-navy .page-header { background:linear-gradient(135deg,#0c1445 0%,#1a3a8f 60%,#2563eb 100%); color:#fff; }
@@ -52,15 +48,13 @@
   .theme-navy .section-label { color:#1d4ed8; }
   .theme-navy .section h2 { color:#0c1445; }
   .theme-navy .step-num { background:#1a3a8f; color:#fff; }
-  .theme-navy .card { background:#eff6ff; border:1px solid #bfdbfe; }
-  .theme-navy .card.featured { background:#dbeafe; border:2px solid #1d4ed8; }
+  .theme-navy .card.featured { background:#eff6ff; border:2px solid #1d4ed8; }
   .theme-navy .summary-box { background:#eff6ff; border:2px solid #bfdbfe; }
 
   @media print { .page { box-shadow:none; margin-bottom:0; page-break-after:always; } }
   @media (max-width:600px) {
     .page-content { padding:0 20px 32px; }
     .page-header  { padding:28px 20px 20px; }
-    .card-grid-2 { grid-template-columns:1fr; }
   }
 </style>
 </head>
@@ -70,37 +64,42 @@
   <div class="page-header">
     <span class="badge">💰 MNP出口戦略 ＆ 未来の仕組み化</span>
     <h1 class="page-title">利益を確実に残す出口戦略<br>× 3ヶ月目の目標設定</h1>
-    <p class="page-subtitle">📘 契約した端末を最高値で売却する手順から、その経験を「月10万円の継続収益」へと進化させる完全ロードマップです。</p>
+    <p class="page-subtitle">📘 契約した端末を最高値で安全に現金化する手順から、その経験を「月10万円の継続収益」へと進化させる完全ロードマップです。</p>
   </div>
   
   <div class="page-content">
 
-    <!-- 前半：具体的な出口戦略（現金化・買取） -->
+    <!-- 前半：具体的な出口戦略（ボリュームアップ版） -->
     <div class="section" style="margin-top: 28px;">
       <div class="section-label">🔴 PHASE 01 ｜ 利益確定の出口戦略</div>
       <h2>📦 端末売却と現金化の具体的手順</h2>
-      <p class="body-text">MNPで手に入れた高額端末を、1円でも高く、安全に現金化するための鉄則ステップです。</p>
+      <p class="body-text">MNPで手に入れた高額端末（iPhoneなど）を、減額されることなく1円でも高く、かつ安全に現金化するための鉄則ルートです。初心者が見落としがちな罠を防ぐチェック項目を含めて解説します。</p>
+
+      <div class="alert-box">
+        <strong>⚠️ 査定に出す前の絶対注意：ネットワーク利用制限の確認</strong><br>
+        端末の残債（一括購入であれば基本問題ありませんが、反映に時間がかかる場合があります）のステータスが「◯」または「▲」であることを必ず確認してください。「▲」の場合、買取店によっては数千円の減額、または買取不可となるケースがあります。各キャリアの確認サイトで製造番号（IMEI）を入力して事前にチェックしましょう。
+      </div>
 
       <div class="step-list">
         <div class="step-item">
           <div class="step-num">1</div>
           <div class="step-content">
-            <div class="step-title">端末は「完全未開封」のまま維持</div>
-            <div class="step-desc">ショップでの開通テスト以外では、箱のシールやフィルム（シュリンク）を絶対に剥がさないでください。未開封状態をキープすることが最高額売却の絶対条件です。</div>
+            <div class="step-title">端末は「完全未開封（外装フィルム・シール維持）」を死守</div>
+            <div class="step-desc">店舗での開通テスト（動作確認）でやむを得ず開封された場合を除き、箱を覆うシュリンクフィルムや未開封シールは絶対に剥がさないでください。万が一開封済みの場合は「新品同様品」扱いとなり、数千円〜1万円以上の減額対象になります。</div>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">2</div>
           <div class="step-content">
-            <div class="step-title">大手買取専門業者の価格比較</div>
-            <div class="step-desc">一般のリサイクルショップではなく、「海峡通商」や「森森買取」など、中華系を含むSIMフリー端末高価買取専門店で当日のリアルタイムな買取相場をチェックします。</div>
+            <div class="step-title">専門店（海峡通商・森森買取など）でのリアルタイム相場比較</div>
+            <div class="step-desc">街の一般的なリサイクルショップや大手中古量販店は、マージンが高く買取額が低いため絶対にNGです。中華系バイヤーと直結している「海峡通商」「森森買取」「買取一丁目」などのWebサイトで、その日の最高買取価格をリアルタイムで比較します。</div>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">3</div>
           <div class="step-content">
-            <div class="step-title">店頭持ち込み または 郵送買取の実行</div>
-            <div class="step-desc">都内の店舗に直接持ち込むか、遠方の場合は郵送買取を申し込みます。各社の価格保証ルール（承認時の価格維持など）をしっかり確認した上で発送し、利益を確定させます。</div>
+            <div class="step-title">郵送買取時の「価格保証ルール」を適用させて発送</div>
+            <div class="step-desc">遠方から郵送で買い取ってもらう場合は、各店の「価格保証（オンライン承認から◯日以内に荷物が届けばその価格を維持）」の条件を必ず確認します。相場は毎日激しく変動するため、価格が固定されたらすぐに梱包し、追跡可能な方法で即日発送して確実に利益を確定させましょう。</div>
           </div>
         </div>
       </div>
@@ -108,43 +107,38 @@
 
     <hr class="divider">
 
-    <!-- 後半：3ヶ月目のマイルストーン（LINEからの一撃ジャンプ先） -->
+    <!-- 後半：3ヶ月目のマイルストーン -->
     <div id="milestone" class="section">
-      <div class="section-label" style="color:#1d4ed8;">🔵 PHASE 02 ｜ 3ヶ月目以降の継続収益化</div>
+      <div class="section-label">🔵 PHASE 02 ｜ 3ヶ月目以降の継続収益化</div>
       <h2>📈 利益を1回で終わらせず「月10万円の仕組み」へ</h2>
-      <p class="body-text">一度きりの転売利益で満足してはもったいありません。ここからMNPを「立派なビジネス」へとステップアップさせます。</p>
+      <p class="body-text">一度きりの転売利益で満足してはもったいありません。ここからMNPの知識を応用し、「立派なビジネス」へとステップアップさせます。</p>
 
       <div class="card featured">
         <div style="font-size:14px; font-weight:700; color:#0c1445; margin-bottom:12px;">🌟 継続収益スキームを構築する3つの柱</div>
         
         <div class="step-list" style="margin-top:0;">
-          <div class="step-item">
-            <div class="step-num" style="background:#1d4ed8;">A</div>
+          <div class="step-item" style="background:#fff;">
+            <div class="step-num">A</div>
             <div class="step-content">
               <div class="step-title">複数名義・家族運用の仕組み化</div>
               <div class="step-desc">正しいルールに則り、家族名義での「利用者登録」を効率的に組み合わせることで、自分1人の枠を超えた複数回線のローテーションを構築。毎シーズン安定した高額キャッシュバックを狙いに行きます。</div>
             </div>
           </div>
-          <div class="step-item">
-            <div class="step-num" style="background:#1d4ed8;">B</div>
+          <div class="step-item" style="background:#fff;">
+            <div class="step-num">B</div>
             <div class="step-content">
               <div class="step-title">クローズドな手配師ネットワークの確立</div>
               <div class="step-desc">一度お世話になった信頼できる手配師やコミュニティと強固な関係を築き、ネットには絶対に出回らない「店舗限定・台数限定の極秘優良案件」の案内を最優先で受け取れるポジションを確保します。</div>
             </div>
           </div>
-          <div class="step-item">
-            <div class="step-num" style="background:#1d4ed8;">C</div>
+          <div class="step-item" style="background:#fff;">
+            <div class="step-num">C</div>
             <div class="step-content">
               <div class="step-title">「プレイヤー」から「情報発信者」への進化</div>
               <div class="step-desc">あなたが実践した「リアルな手順」は、これから副業を始めたい初心者にとって喉から手が出るほど欲しい情報です。その実績をもとにX（旧Twitter）やLINEで発信を行い、アドバイザーやコンサルタント側に回ることで、労働を伴わない「純利10万円」の強固な収益の柱を作ります。</div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card bg-yellow-light" style="margin-top:14px; color:#1a1a1a; font-size:13px;">
-        💡 <strong>LINEリッチメニュー連動のお知らせ：</strong><br>
-        メニューの「出口戦略・3ヶ月目標」ボタンのリンク先URLを <code>https://yappi7000.github.io/Exit/#milestone</code> に設定していただくと、タップした瞬間にこの場所へ直接自動スクロールします。
       </div>
     </div>
 
