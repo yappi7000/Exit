@@ -30,9 +30,15 @@
   .card { border-radius:12px; padding:18px 20px; margin-bottom:12px; }
   .alert-box { background:#fff1f2; border:1px solid #fecdd3; border-radius:12px; padding:16px 20px; margin-bottom:20px; font-size:13px; color:#9f1239; line-height:1.7; }
 
-  /* ステップ */
+  /* ステップ・リスト */
   .step-list { display:flex; flex-direction:column; gap:16px; margin-top:14px; }
   .step-item { display:flex; gap:14px; align-items:flex-start; background:#f8fafc; padding:16px; border-radius:10px; border:1px solid #e2e8f0; }
+  
+  /* ★【C】だけを目立たせる特別仕様クラス */
+  .step-item.featured-goal { background:#fefce8; border:2px solid #f97316; box-shadow:0 4px 12px rgba(249,115,22,0.12); }
+  .step-item.featured-goal .step-num { background:#f97316; color:#fff; }
+  .step-item.featured-goal .step-title { color:#ea580c; font-size:15px; }
+
   .step-num { width:28px; height:28px; min-width:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; margin-top:2px; }
   .step-content .step-title { font-size:14px; font-weight:700; margin-bottom:6px; color:#0c1445; }
   .step-content .step-desc { font-size:13px; color:#475569; line-height:1.7; }
@@ -64,20 +70,20 @@
   <div class="page-header">
     <span class="badge">💰 MNP出口戦略 ＆ 未来の仕組み化</span>
     <h1 class="page-title">利益を確実に残す出口戦略<br>× 3ヶ月目の目標設定</h1>
-    <p class="page-subtitle">📘 契約した端末を最高値で安全に現金化する手順から、その経験を「月10万円の継続収益」へと進化させる完全ロードマップです。</p>
+    <p class="page-subtitle">📘 契約した端末を最高値で安全に現金化する手順から、この経験を「一生稼げる本質的な力」へと進化させるロードマップです。</p>
   </div>
   
   <div class="page-content">
 
-    <!-- 前半：具体的な出口戦略（ボリュームアップ版） -->
+    <!-- 前半：具体的な出口戦略（ステップは通常デザインに戻し、内容を維持） -->
     <div class="section" style="margin-top: 28px;">
       <div class="section-label">🔴 PHASE 01 ｜ 利益確定の出口戦略</div>
       <h2>📦 端末売却と現金化の具体的手順</h2>
-      <p class="body-text">MNPで手に入れた高額端末（iPhoneなど）を、減額されることなく1円でも高く、かつ安全に現金化するための鉄則ルートです。初心者が見落としがちな罠を防ぐチェック項目を含めて解説します。</p>
+      <p class="body-text">MNPで手に入れた高額端末を、減額されることなく1円でも高く、かつ安全に現金化するための鉄則ルートです。最後の『利益確定』のアクションまで迷わず進めていきましょう。</p>
 
       <div class="alert-box">
         <strong>⚠️ 査定に出す前の絶対注意：ネットワーク利用制限の確認</strong><br>
-        端末の残債（一括購入であれば基本問題ありませんが、反映に時間がかかる場合があります）のステータスが「◯」または「▲」であることを必ず確認してください。「▲」の場合、買取店によっては数千円の減額、または買取不可となるケースがあります。各キャリアの確認サイトで製造番号（IMEI）を入力して事前にチェックしましょう。
+        端末の残債ステータスが「◯」または「▲」であることを必ず確認してください。「▲」の場合、買取店によっては数千円の減額、または買取不可となるケースがあります。各キャリアの確認サイトで製造番号（IMEI）を入力して事前にチェックしましょう。
       </div>
 
       <div class="step-list">
@@ -98,7 +104,7 @@
         <div class="step-item">
           <div class="step-num">3</div>
           <div class="step-content">
-            <div class="step-title">郵送買取時の「価格保証ルール」を適用させて発送</div>
+            <div class="step-title">郵送買取時の「価格保証ルール」を適用させて即発送</div>
             <div class="step-desc">遠方から郵送で買い取ってもらう場合は、各店の「価格保証（オンライン承認から◯日以内に荷物が届けばその価格を維持）」の条件を必ず確認します。相場は毎日激しく変動するため、価格が固定されたらすぐに梱包し、追跡可能な方法で即日発送して確実に利益を確定させましょう。</div>
           </div>
         </div>
@@ -107,35 +113,37 @@
 
     <hr class="divider">
 
-    <!-- 後半：3ヶ月目のマイルストーン -->
+    <!-- 後半：3ヶ月目のマイルストーン（Cを強力に色分け ＆ ビジネスオーナーへリライト） -->
     <div id="milestone" class="section">
       <div class="section-label">🔵 PHASE 02 ｜ 3ヶ月目以降の継続収益化</div>
-      <h2>📈 利益を1回で終わらせず「月10万円の仕組み」へ</h2>
-      <p class="body-text">一度きりの転売利益で満足してはもったいありません。ここからMNPの知識を応用し、「立派なビジネス」へとステップアップさせます。</p>
+      <h2>📈 利益を1回で終わらせず「時代に左右されないビジネスの力」へ</h2>
+      <p class="body-text">今、MNPの市場にも様々な規制が入り、これまで通りの単純な手法は通用しなくなっていきます。市場は常に変わり続けます。だからこそ、一度きりの転売利益で満足して終わるのではなく、この経験を<strong>『どんな時代・市場でも自力で生き残れる本質的なスキル』</strong>へと昇華させる必要があります。</p>
 
       <div class="card featured">
-        <div style="font-size:14px; font-weight:700; color:#0c1445; margin-bottom:12px;">🌟 継続収益スキームを構築する3つの柱</div>
+        <div style="font-size:14px; font-weight:700; color:#0c1445; margin-bottom:12px;">🌟 目先の利益を「一生モノの資産」に変える3つの戦略</div>
         
         <div class="step-list" style="margin-top:0;">
           <div class="step-item" style="background:#fff;">
             <div class="step-num">A</div>
             <div class="step-content">
-              <div class="step-title">複数名義・家族運用の仕組み化</div>
-              <div class="step-desc">正しいルールに則り、家族名義での「利用者登録」を効率的に組み合わせることで、自分1人の枠を超えた複数回線のローテーションを構築。毎シーズン安定した高額キャッシュバックを狙いに行きます。</div>
+              <div class="step-title">市場の変化を捉える「情報収集・分析力」の確立</div>
+              <div class="step-desc">規制が入るということは、裏を返せば「新しい抜け道や優良案件がクローズド化する」ということです。信頼できる手配師や独自のネットワークを強固にし、一般には出回らない店舗限定案件をいち早くキャッチする仕組みを整え、市場の変化に動じない立ち回りを身につけます。</div>
             </div>
           </div>
           <div class="step-item" style="background:#fff;">
             <div class="step-num">B</div>
             <div class="step-content">
-              <div class="step-title">クローズドな手配師ネットワークの確立</div>
-              <div class="step-desc">一度お世話になった信頼できる手配師やコミュニティと強固な関係を築き、ネットには絶対に出回らない「店舗限定・台数限定の極秘優良案件」の案内を最優先で受け取れるポジションを確保します。</div>
+              <div class="step-title">リスクゼロで掴んだ「自力で稼ぐ感覚」の再現化</div>
+              <div class="step-desc">スマホとクレカという身近な道具を使い、自分の頭と足を動かして最初の利益を生み出したという「成功体験」こそが最大の資産です。これを家族運用や複数名義の仕組み化へと応用し、労働に依存しない効率的なキャッシュフローの回し方を体得します。</div>
             </div>
           </div>
-          <div class="step-item" style="background:#fff;">
+          
+          <!-- ★【C】：「情報発信者」から「本質的なビジネスの体得」へリライトし、強力に色分け -->
+          <div class="step-item featured-goal">
             <div class="step-num">C</div>
             <div class="step-content">
-              <div class="step-title">「プレイヤー」から「情報発信者」への進化</div>
-              <div class="step-desc">あなたが実践した「リアルな手順」は、これから副業を始めたい初心者にとって喉から手が出るほど欲しい情報です。その実績をもとにX（旧Twitter）やLINEで発信を行い、アドバイザーやコンサルタント側に回ることで、労働を伴わない「純利10万円」の強固な収益の柱を作ります。</div>
+              <div class="step-title"><strong>【真のゴール】「プレイヤー」から「本質的なセールス・マーケティングの体得」への昇華</strong></div>
+              <div class="step-desc">あなたがMNPの実践で得た「リアルな手順」「失敗談」「利益を出したデータ」そのものが、これから「自力で稼ぎたい」と願う初心者にとって最大の価値（商品）になります。この一連のプロセスをベースに、XやLINEを活用して他者に価値を提供し、アドバイザーやコンサルタント側に回ることで、ビジネスの本質である<strong>【集客・教育・販売（マーケティングとセールス）の力】</strong>を完璧に自分のモノにします。これこそが、どんな市場に変わっても一生食いっぱぐれない最強の武器になります。</div>
             </div>
           </div>
         </div>
@@ -146,7 +154,7 @@
     <div class="summary-box">
       <div style="font-size:13px; font-weight:700; color:#1d4ed8; margin-bottom:8px;">💡 次のステップに進みたいあなたへ</div>
       <p style="font-size:14px; color:#0c1445; line-height:1.8;">
-        「売却の流れに不安がある」「家族運用の具体的なシミュレーションをしてほしい」「自分も発信側へ回って仕組み化してみたい」<br>
+        「目先の利益の確定方法をしっかり教わりたい」「MNPの経験をベースに、どんな時代でも稼げる本質的なスキルへ繋げていきたい」<br>
         そう思った方は、一人で悩まずに公式LINEの<strong>「無料相談」</strong>ボタンからいつでもお気軽に声をかけてください。あなたの現状に合わせた最適な拡大ルートをアドバイスします！
       </p>
       <div style="margin-top:14px; padding-top:12px; border-top:1px dashed #bfdbfe; text-align:right; font-size:12px; color:#888;">
