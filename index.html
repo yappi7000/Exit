@@ -3,1133 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MNP出口戦略 完全ガイド 2026年版</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>MNP出口戦略 ＆ 3ヶ月目以降の継続収益化ガイド</title>
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&display=swap');
 
-:root {
-  --bg: #f7f6f2;
-  --surface: #ffffff;
-  --text: #1a1917;
-  --text-sub: #5a5855;
-  --text-muted: #9a9894;
-  --border: rgba(0,0,0,0.07);
-  --accent: #E8430A;
-  --accent-light: #FDF0EB;
-  --gold: #C8961A;
-  --gold-light: #FDF8E8;
-  --green: #197A50;
-  --green-light: #E8F6F0;
-  --blue: #1255A0;
-  --blue-light: #E8F0FB;
-  --purple: #5A30B0;
-  --purple-light: #F0ECFB;
-  --pink: #CC1060;
-  --pink-light: #FCE8F3;
-  --dark: #1a1917;
-  --mono: 'DM Mono', monospace;
-}
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Noto Sans JP', sans-serif; background:#f5f5f0; color:#1a1a1a; padding:40px 20px; }
 
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  padding: 2rem 1rem 6rem;
-}
+  /* ===== 共通パーツ ===== */
+  .page { max-width:760px; margin:0 auto 80px; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,0.08); }
+  .page-header { padding:36px 40px 28px; }
+  .page-content { padding:0 40px 40px; }
 
-.page { max-width: 700px; margin: 0 auto; }
+  .badge { display:inline-block; font-size:11px; font-weight:700; letter-spacing:0.12em; padding:4px 12px; border-radius:999px; margin-bottom:10px; }
+  .page-title { font-family:'Noto Serif JP', serif; font-size:28px; font-weight:700; line-height:1.4; margin-bottom:8px; }
+  .page-subtitle { font-size:14px; line-height:1.7; }
 
-/* ========== PROLOGUE ========== */
-.prologue {
-  background: var(--dark);
-  border-radius: 24px;
-  padding: 3.5rem 2rem 3rem;
-  margin-bottom: 3rem;
-  position: relative;
-  overflow: hidden;
-}
-.prologue::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 80% 20%, rgba(232,67,10,0.18) 0%, transparent 60%),
-              radial-gradient(ellipse at 20% 80%, rgba(90,48,176,0.15) 0%, transparent 60%);
-}
-.prologue-label {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  color: rgba(255,255,255,0.35);
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
-  position: relative;
-  text-align: center;
-}
-.prologue-title {
-  font-size: 36px;
-  font-weight: 900;
-  color: #fff;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  position: relative;
-  text-align: center;
-}
-.prologue-title .hi {
-  color: #FAC775;
-  display: inline;
-}
-.prologue-lead {
-  font-size: 14px;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.9;
-  position: relative;
-  margin-bottom: 2rem;
-}
-.prologue-lead strong {
-  color: rgba(255,255,255,0.9);
-  font-weight: 500;
-}
-.prologue-story {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  position: relative;
-}
-.story-block {
-  background: rgba(255,255,255,0.06);
-  border: 0.5px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  padding: 1rem 1.25rem;
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-.story-icon {
-  font-size: 18px;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-.story-text {
-  font-size: 13px;
-  color: rgba(255,255,255,0.65);
-  line-height: 1.75;
-}
-.story-text strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+  .section { margin-bottom:36px; }
+  .section-label { font-size:11px; font-weight:700; letter-spacing:0.1em; margin-bottom:6px; }
+  .section h2 { font-size:20px; font-weight:700; margin-bottom:14px; line-height:1.4; }
+  .body-text { font-size:14px; color:#444; line-height:1.8; margin-bottom:12px; }
 
-/* ========== SECTION TITLE ========== */
-.section-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 3rem 0 1.25rem;
-}
-.section-num {
-  font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 500;
-  padding: 4px 10px;
-  border-radius: 99px;
-  background: var(--dark);
-  color: #fff;
-  flex-shrink: 0;
-  letter-spacing: 0.05em;
-}
-.section-title {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--text);
-}
+  .divider { border:none; border-top:2px dashed #e0e0e0; margin:36px 0; }
 
-/* ========== ENTRY POINT ========== */
-.entry-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 1rem;
-}
-.entry-card {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 14px;
-  padding: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-.entry-card.best::after {
-  content: 'BEST';
-  position: absolute;
-  top: 8px; right: 8px;
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 500;
-  background: var(--accent);
-  color: #fff;
-  padding: 2px 7px;
-  border-radius: 99px;
-}
-.entry-label {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
-  margin-bottom: 6px;
-  text-transform: uppercase;
-}
-.entry-name { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
-.entry-cb {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 2px;
-}
-.entry-cb-unit { font-size: 11px; font-weight: 500; color: var(--text-sub); }
-.entry-pts {
-  font-size: 11px;
-  color: var(--text-sub);
-  line-height: 1.6;
-  margin-top: 8px;
-}
-.entry-pts li {
-  list-style: none;
-  display: flex;
-  align-items: flex-start;
-  gap: 5px;
-}
-.entry-pts li::before { content: '·'; color: var(--text-muted); flex-shrink: 0; }
+  /* カード */
+  .card { border-radius:12px; padding:18px 20px; margin-bottom:12px; }
+  .card-grid { display:grid; gap:12px; margin-top:14px; }
+  .card-grid-2 { grid-template-columns:1fr 1fr; }
 
-.entry-compare {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-}
-.ec-row {
-  display: grid;
-  grid-template-columns: 100px 1fr 1fr 1fr;
-  border-bottom: 0.5px solid var(--border);
-}
-.ec-row:last-child { border-bottom: none; }
-.ec-cell {
-  padding: 10px 12px;
-  font-size: 12px;
-  color: var(--text-sub);
-  border-right: 0.5px solid var(--border);
-}
-.ec-cell:last-child { border-right: none; }
-.ec-cell.head {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
-  background: var(--bg);
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.ec-cell.label {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--text);
-  background: var(--bg);
-}
-.ec-cell.hi { color: var(--accent); font-weight: 700; }
-.ec-cell.lo { color: var(--text-muted); }
+  /* ステップ */
+  .step-list { display:flex; flex-direction:column; gap:12px; margin-top:14px; }
+  .step-item { display:flex; gap:14px; align-items:flex-start; }
+  .step-num { width:28px; height:28px; min-width:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; margin-top:2px; }
+  .step-content .step-title { font-size:14px; font-weight:700; margin-bottom:4px; }
+  .step-content .step-desc { font-size:13px; color:#555; line-height:1.7; }
 
-/* ========== CARRIER CARDS ========== */
-.carriers { display: flex; flex-direction: column; gap: 14px; }
+  /* まとめ */
+  .summary-box { border-radius:14px; padding:24px 28px; margin-top:28px; }
 
-.carrier-card {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 18px;
-  overflow: hidden;
-}
+  /* ユーティリティ */
+  .bg-yellow-light { background:#fefce8; border:1px solid #fde047; }
 
-.carrier-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 1.1rem 1.4rem;
-  border-bottom: 0.5px solid var(--border);
-}
-.carrier-badge {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  flex-shrink: 0;
-  text-align: center;
-  line-height: 1.2;
-}
-.badge-docomo { background: #E8F0FB; color: #1255A0; }
-.badge-au { background: #FDF0EB; color: #C0390A; }
-.badge-sb { background: #FDF8E8; color: #8C6900; }
-.badge-rk { background: #FCE8F3; color: #CC1060; }
+  /* ===== テーマ: ネイビー ===== */
+  .theme-navy .page-header { background:linear-gradient(135deg,#0c1445 0%,#1a3a8f 60%,#2563eb 100%); color:#fff; }
+  .theme-navy .badge { background:rgba(255,255,255,0.18); color:#fff; }
+  .theme-navy .page-title { color:#fff; }
+  .theme-navy .page-subtitle { color:rgba(255,255,255,0.8); }
+  .theme-navy .section-label { color:#1d4ed8; }
+  .theme-navy .section h2 { color:#0c1445; }
+  .theme-navy .step-num { background:#1a3a8f; color:#fff; }
+  .theme-navy .card { background:#eff6ff; border:1px solid #bfdbfe; }
+  .theme-navy .card.featured { background:#dbeafe; border:2px solid #1d4ed8; }
+  .theme-navy .summary-box { background:#eff6ff; border:2px solid #bfdbfe; }
 
-.carrier-meta { flex: 1; }
-.carrier-name { font-size: 16px; font-weight: 700; }
-.carrier-sub { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
-
-.carrier-days {
-  text-align: right;
-  flex-shrink: 0;
-}
-.days-num { font-size: 22px; font-weight: 700; }
-.days-label { font-size: 10px; color: var(--text-muted); }
-
-.carrier-body { padding: 1.25rem 1.4rem; }
-
-.carrier-strategy {
-  background: var(--bg);
-  border-radius: 10px;
-  padding: 1rem 1.1rem;
-  margin-bottom: 1rem;
-}
-.cs-label {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-.cs-text { font-size: 13px; color: var(--text-sub); line-height: 1.75; }
-.cs-text strong { color: var(--text); font-weight: 500; }
-
-.carrier-rows { display: flex; flex-direction: column; gap: 8px; }
-.c-row {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-.c-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: var(--text-muted);
-  flex-shrink: 0;
-  margin-top: 7px;
-}
-.c-text { font-size: 12.5px; color: var(--text-sub); line-height: 1.7; }
-.c-text strong { color: var(--text); font-weight: 500; }
-
-.carrier-warn {
-  margin-top: 1rem;
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
-  background: #FEF2F0;
-  border-left: 3px solid var(--accent);
-  font-size: 12px;
-  color: #7A2208;
-  line-height: 1.7;
-}
-.carrier-warn strong { font-weight: 600; }
-
-.carrier-footer {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 0.5px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.cf-label {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  flex-shrink: 0;
-}
-.cf-value { font-size: 12.5px; font-weight: 600; color: var(--text); }
-
-/* colors per carrier */
-.c-docomo .days-num { color: var(--blue); }
-.c-au .days-num { color: var(--accent); }
-.c-sb .days-num { color: var(--gold); }
-.c-rk .days-num { color: var(--pink); }
-
-/* ========== TIMING SECTION ========== */
-.timing-box {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 18px;
-  overflow: hidden;
-}
-.timing-head {
-  background: var(--dark);
-  padding: 1rem 1.4rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.timing-head-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-}
-.timing-head-sub { font-size: 11px; color: rgba(255,255,255,0.45); margin-left: auto; }
-
-.timing-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-}
-.timing-item {
-  padding: 1.25rem 1.4rem;
-  border-bottom: 0.5px solid var(--border);
-  border-right: 0.5px solid var(--border);
-}
-.timing-item:nth-child(even) { border-right: none; }
-.timing-item:last-child, .timing-item:nth-last-child(2) { border-bottom: none; }
-
-.ti-num {
-  font-family: var(--mono);
-  font-size: 22px;
-  font-weight: 500;
-  color: var(--text);
-  line-height: 1;
-  margin-bottom: 4px;
-}
-.ti-label { font-size: 11px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-.ti-desc { font-size: 11.5px; color: var(--text-sub); line-height: 1.65; }
-
-/* ========== CALC SHEET ========== */
-.calc-section { margin-top: 4rem; }
-.calc-intro {
-  background: var(--gold-light);
-  border: 0.5px solid rgba(200,150,26,0.2);
-  border-radius: 14px;
-  padding: 1rem 1.25rem;
-  margin-bottom: 1.25rem;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-.calc-intro-icon { font-size: 18px; flex-shrink: 0; }
-.calc-intro-text { font-size: 13px; color: #6B4E10; line-height: 1.7; }
-
-.calc-table-wrap {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 18px;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-.calc-table-title {
-  padding: 0.9rem 1.25rem;
-  background: var(--dark);
-  font-size: 13px;
-  font-weight: 700;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.calc-table-title .dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: #FAC775;
-  flex-shrink: 0;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-th {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  padding: 8px 10px;
-  text-align: left;
-  background: var(--bg);
-  border-bottom: 0.5px solid var(--border);
-}
-td {
-  padding: 10px 10px;
-  font-size: 12px;
-  color: var(--text-sub);
-  border-bottom: 0.5px solid var(--border);
-  vertical-align: top;
-}
-tr:last-child td { border-bottom: none; }
-td:first-child { font-weight: 600; color: var(--text); white-space: nowrap; }
-.input-cell {
-  background: #FAFAF8;
-  border: 0.5px solid var(--border);
-  border-radius: 6px;
-  padding: 5px 8px;
-  font-size: 12px;
-  color: var(--text-muted);
-  font-style: italic;
-  display: inline-block;
-  min-width: 100px;
-}
-.calc-sum-row td {
-  background: var(--dark);
-  color: rgba(255,255,255,0.7);
-  border-bottom: none;
-  font-weight: 700;
-}
-.calc-sum-row td:first-child { color: rgba(255,255,255,0.9); }
-.calc-sum-row .sum-val { color: #FAC775; font-size: 14px; }
-
-/* PROFIT BOX */
-.profit-box {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 18px;
-  overflow: hidden;
-}
-.profit-head {
-  padding: 0.9rem 1.25rem;
-  background: var(--green);
-  font-size: 13px;
-  font-weight: 700;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.profit-head .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.5); }
-
-.profit-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 1.25rem;
-  border-bottom: 0.5px solid var(--border);
-  font-size: 13px;
-}
-.profit-row:last-child { border-bottom: none; }
-.pr-label { color: var(--text-sub); }
-.pr-val { font-weight: 700; color: var(--text); font-family: var(--mono); }
-.pr-val.green { color: var(--green); font-size: 15px; }
-.pr-val.red { color: var(--accent); }
-.profit-total {
-  background: var(--green-light);
-  border-top: 1px solid rgba(25,122,80,0.2);
-  padding: 1rem 1.25rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.pt-label { font-size: 13px; font-weight: 700; color: var(--green); }
-.pt-val { font-size: 22px; font-weight: 700; color: var(--green); font-family: var(--mono); }
-
-/* TIPS */
-.tips-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 2rem;
-}
-.tip-card {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 14px;
-  padding: 1rem 1.1rem;
-}
-.tip-icon { font-size: 20px; margin-bottom: 8px; }
-.tip-title { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
-.tip-text { font-size: 11.5px; color: var(--text-sub); line-height: 1.65; }
-
-/* FINAL */
-.final-note {
-  background: var(--dark);
-  border-radius: 18px;
-  padding: 2rem 1.5rem;
-  margin-top: 3rem;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-.final-note::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(255,255,255,0.015) 20px, rgba(255,255,255,0.015) 40px);
-}
-.fn-eyebrow {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  color: rgba(255,255,255,0.3);
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-  position: relative;
-}
-.fn-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.35;
-  margin-bottom: 1rem;
-  position: relative;
-}
-.fn-title .acc { color: #FAC775; }
-.fn-msg {
-  font-size: 13px;
-  color: rgba(255,255,255,0.45);
-  line-height: 1.8;
-  position: relative;
-}
-
-@media (max-width: 520px) {
-  .entry-grid { grid-template-columns: 1fr; }
-  .timing-grid { grid-template-columns: 1fr; }
-  .timing-item { border-right: none; }
-  .tips-grid { grid-template-columns: 1fr; }
-  .prologue-title { font-size: 26px; }
-  .ec-cell { font-size: 10.5px; padding: 8px 8px; }
-}
+  @media print { .page { box-shadow:none; margin-bottom:0; page-break-after:always; } }
+  @media (max-width:600px) {
+    .page-content { padding:0 20px 32px; }
+    .page-header  { padding:28px 20px 20px; }
+    .card-grid-2 { grid-template-columns:1fr; }
+  }
 </style>
 </head>
 <body>
-<div class="page">
 
-<!-- ===== PROLOGUE ===== -->
-<div class="prologue">
-  <p class="prologue-label">MNP出口戦略 完全ガイド 2026年版</p>
-  <h1 class="prologue-title">同じ「乗り換え」でも<br><span class="hi">入り口で数万円変わる。</span><br>それが出口戦略の本質だ。</h1>
-  <p class="prologue-lead">
-    MNP（携帯番号そのままの乗り換え）でキャッシュバックをもらう。<br>
-    仕組みは単純に見えて、<strong>どこで・どう契約するかによって1回あたり数万円の差</strong>が生まれる。<br><br>
-    ネットで検索すると「オンラインで申し込めばOK」と書いてあることが多い。<br>
-    しかし現実は違う。<strong>家電量販店・キャリアショップの店頭案件</strong>や、<strong>手配師経由の一括案件</strong>には、
-    オンラインでは絶対に出てこない高額キャッシュバックが存在する。<br><br>
-    このガイドでは「入り口の選び方」から「4大キャリアの最適な出口＝維持戦略」まで、
-    初心者が読んでもすぐ動けるように、すべてを1冊にまとめた。
-  </p>
-  <div class="prologue-story">
-    <div class="story-block">
-      <span class="story-icon">🎯</span>
-      <p class="story-text"><strong>MNPとは何か：</strong>今使っている電話番号を変えずに別のキャリアへ乗り換えられる制度。転出・転入ともに手数料は0円。2026年現在、大手4キャリア＋サブブランドはすべてMNPワンストップ対応で手続きがさらに簡単になっている。</p>
+<div class="page theme-navy">
+  <div class="page-header">
+    <span class="badge">💰 MNP出口戦略 ＆ 未来の仕組み化</span>
+    <h1 class="page-title">利益を確実に残す出口戦略<br>× 3ヶ月目の目標設定</h1>
+    <p class="page-subtitle">📘 契約した端末を最高値で売却する手順から、その経験を「月10万円の継続収益」へと進化させる完全ロードマップです。</p>
+  </div>
+  
+  <div class="page-content">
+
+    <!-- 前半：具体的な出口戦略（現金化・買取） -->
+    <div class="section" style="margin-top: 28px;">
+      <div class="section-label">🔴 PHASE 01 ｜ 利益確定の出口戦略</div>
+      <h2>📦 端末売却と現金化の具体的手順</h2>
+      <p class="body-text">MNPで手に入れた高額端末を、1円でも高く、安全に現金化するための鉄則ステップです。</p>
+
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">端末は「完全未開封」のまま維持</div>
+            <div class="step-desc">ショップでの開通テスト以外では、箱のシールやフィルム（シュリンク）を絶対に剥がさないでください。未開封状態をキープすることが最高額売却の絶対条件です。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">大手買取専門業者の価格比較</div>
+            <div class="step-desc">一般のリサイクルショップではなく、「海峡通商」や「森森買取」など、中華系を含むSIMフリー端末高価買取専門店で当日のリアルタイムな買取相場をチェックします。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">店頭持ち込み または 郵送買取の実行</div>
+            <div class="step-desc">都内の店舗に直接持ち込むか、遠方の場合は郵送買取を申し込みます。各社の価格保証ルール（承認時の価格維持など）をしっかり確認した上で発送し、利益を確定させます。</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="story-block">
-      <span class="story-icon">💰</span>
-      <p class="story-text"><strong>なぜお金になるのか：</strong>各キャリアは新規契約・MNP獲得のために高額のキャッシュバックやポイントを用意している。これは純粋に「契約の対価」として受け取れる合法的な収入。条件をクリアして繰り返すことで月10万円超も現実になる。</p>
+
+    <hr class="divider">
+
+    <!-- 後半：3ヶ月目のマイルストーン（LINEからの一撃ジャンプ先） -->
+    <div id="milestone" class="section">
+      <div class="section-label" style="color:#1d4ed8;">🔵 PHASE 02 ｜ 3ヶ月目以降の継続収益化</div>
+      <h2>📈 利益を1回で終わらせず「月10万円の仕組み」へ</h2>
+      <p class="body-text">一度きりの転売利益で満足してはもったいありません。ここからMNPを「立派なビジネス」へとステップアップさせます。</p>
+
+      <div class="card featured">
+        <div style="font-size:14px; font-weight:700; color:#0c1445; margin-bottom:12px;">🌟 継続収益スキームを構築する3つの柱</div>
+        
+        <div class="step-list" style="margin-top:0;">
+          <div class="step-item">
+            <div class="step-num" style="background:#1d4ed8;">A</div>
+            <div class="step-content">
+              <div class="step-title">複数名義・家族運用の仕組み化</div>
+              <div class="step-desc">正しいルールに則り、家族名義での「利用者登録」を効率的に組み合わせることで、自分1人の枠を超えた複数回線のローテーションを構築。毎シーズン安定した高額キャッシュバックを狙いに行きます。</div>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num" style="background:#1d4ed8;">B</div>
+            <div class="step-content">
+              <div class="step-title">クローズドな手配師ネットワークの確立</div>
+              <div class="step-desc">一度お世話になった信頼できる手配師やコミュニティと強固な関係を築き、ネットには絶対に出回らない「店舗限定・台数限定の極秘優良案件」の案内を最優先で受け取れるポジションを確保します。</div>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num" style="background:#1d4ed8;">C</div>
+            <div class="step-content">
+              <div class="step-title">「プレイヤー」から「情報発信者」への進化</div>
+              <div class="step-desc">あなたが実践した「リアルな手順」は、これから副業を始めたい初心者にとって喉から手が出るほど欲しい情報です。その実績をもとにX（旧Twitter）やLINEで発信を行い、アドバイザーやコンサルタント側に回ることで、労働を伴わない「純利10万円」の強固な収益の柱を作ります。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card bg-yellow-light" style="margin-top:14px; color:#1a1a1a; font-size:13px;">
+        💡 <strong>LINEリッチメニュー連動のお知らせ：</strong><br>
+        メニューの「出口戦略・3ヶ月目標」ボタンのリンク先URLを <code>https://yappi7000.github.io/Exit/#milestone</code> に設定していただくと、タップした瞬間にこの場所へ直接自動スクロールします。
+      </div>
     </div>
-    <div class="story-block">
-      <span class="story-icon">⚠️</span>
-      <p class="story-text"><strong>最大のリスク＝ブラックリスト：</strong>維持期間を守らずに早期解約すると、TCA（業界団体）経由でキャリア各社に情報が共有され、以後の契約が断られる「ブラック」状態になる。これが出口戦略の核心。正しい期間を守ればリスクはほぼゼロ。</p>
+
+    <!-- やっぴーさんからの個別相談・着地メッセージ -->
+    <div class="summary-box">
+      <div style="font-size:13px; font-weight:700; color:#1d4ed8; margin-bottom:8px;">💡 次のステップに進みたいあなたへ</div>
+      <p style="font-size:14px; color:#0c1445; line-height:1.8;">
+        「売却の流れに不安がある」「家族運用の具体的なシミュレーションをしてほしい」「自分も発信側へ回って仕組み化してみたい」<br>
+        そう思った方は、一人で悩まずに公式LINEの<strong>「無料相談」</strong>ボタンからいつでもお気軽に声をかけてください。あなたの現状に合わせた最適な拡大ルートをアドバイスします！
+      </p>
+      <div style="margin-top:14px; padding-top:12px; border-top:1px dashed #bfdbfe; text-align:right; font-size:12px; color:#888;">
+        ✍️ やっぴー（<a href="https://twitter.com/8p_thankyou" style="color:#888; text-decoration: none;">@8p_thankyou</a>）
+      </div>
     </div>
-    <div class="story-block">
-      <span class="story-icon">🔑</span>
-      <p class="story-text"><strong>出口戦略のゴール：</strong>「いつ・どのキャリアで契約し・いつ解約して・次にどこへ乗り換えるか」を管理すること。各キャリアの安全な維持期間＋格安プランへの乗り換えで維持コストを最小化しながら、最大のキャッシュバックを受け取り続ける仕組みを作る。</p>
-    </div>
+
   </div>
 </div>
 
-<!-- ===== SECTION 1: 入り口の選び方 ===== -->
-<div class="section-head">
-  <span class="section-num">SECTION 01</span>
-  <p class="section-title">入り口の選び方 — どこで契約するかで収入が変わる</p>
-</div>
-
-<div class="entry-grid" style="margin-bottom:14px;">
-  <div class="entry-card">
-    <p class="entry-label">ONLINE</p>
-    <p class="entry-name">📱 オンライン申込</p>
-    <p class="entry-cb">1〜3<span class="entry-cb-unit">万円相当</span></p>
-    <ul class="entry-pts">
-      <li>24時間いつでも申し込める</li>
-      <li>事務手数料が無料のことが多い</li>
-      <li>ポイント還元が中心でやや低め</li>
-      <li>初心者が最初に選びやすい入り口</li>
-    </ul>
-  </div>
-  <div class="entry-card">
-    <p class="entry-label">SHOP</p>
-    <p class="entry-name">🏪 家電量販店・ショップ</p>
-    <p class="entry-cb">3〜10<span class="entry-cb-unit">万円相当</span></p>
-    <ul class="entry-pts">
-      <li>オンライン非公開の現金CB案件あり</li>
-      <li>端末代金の大幅値引き＋CB の組み合わせ</li>
-      <li>店舗限定キャンペーンで還元額UP</li>
-      <li>ビックカメラ・ヨドバシ等が狙い目</li>
-    </ul>
-  </div>
-  <div class="entry-card best">
-    <p class="entry-label">HANDLER</p>
-    <p class="entry-name">🤝 手配師・一括案件</p>
-    <p class="entry-cb">5〜20<span class="entry-cb-unit">万円超</span></p>
-    <ul class="entry-pts">
-      <li>非公開の高額CB案件を紹介してもらえる</li>
-      <li>端末一括0円＋CB の組み合わせも存在</li>
-      <li>1台あたりの純利益が最大になりやすい</li>
-      <li>案件情報は下記の有料グループで配信中</li>
-    </ul>
-    <a href="https://utage-system.com/line/open/kigb6wIDtdgC?mtid=n9QNOaVM4xy4"
-       target="_blank"
-       style="display:block;margin-top:12px;padding:8px 10px;background:var(--accent);color:#fff;border-radius:8px;font-size:11px;font-weight:700;text-align:center;text-decoration:none;letter-spacing:0.04em;line-height:1.4;">
-      🔗 有料案件グループに参加する →
-    </a>
-  </div>
-</div>
-
-<div class="entry-compare">
-  <div class="ec-row">
-    <div class="ec-cell head label">比較軸</div>
-    <div class="ec-cell head">オンライン</div>
-    <div class="ec-cell head">家電量販店</div>
-    <div class="ec-cell head">手配師案件</div>
-  </div>
-  <div class="ec-row">
-    <div class="ec-cell label">CB水準</div>
-    <div class="ec-cell lo">1〜3万円</div>
-    <div class="ec-cell">3〜10万円</div>
-    <div class="ec-cell hi">5〜20万円+</div>
-  </div>
-  <div class="ec-row">
-    <div class="ec-cell label">手軽さ</div>
-    <div class="ec-cell hi">◎ 最も簡単</div>
-    <div class="ec-cell">○ 来店必要</div>
-    <div class="ec-cell lo">△ 人脈が必要</div>
-  </div>
-  <div class="ec-row">
-    <div class="ec-cell label">CB形態</div>
-    <div class="ec-cell">ポイント中心</div>
-    <div class="ec-cell">現金＋ポイント</div>
-    <div class="ec-cell hi">現金が多い</div>
-  </div>
-  <div class="ec-row">
-    <div class="ec-cell label">情報公開</div>
-    <div class="ec-cell hi">完全公開</div>
-    <div class="ec-cell">一部非公開</div>
-    <div class="ec-cell lo">非公開・紹介制</div>
-  </div>
-  <div class="ec-row">
-    <div class="ec-cell label">おすすめ</div>
-    <div class="ec-cell">初回・練習用</div>
-    <div class="ec-cell hi">2回目以降に◎</div>
-    <div class="ec-cell hi">慣れたら最優先</div>
-  </div>
-</div>
-
-<div style="background:var(--blue-light);border-radius:12px;padding:1rem 1.25rem;margin-top:12px;font-size:12.5px;color:#1a3a6a;line-height:1.75;">
-  <strong>💡 初心者向けアドバイス：</strong><br>
-  最初はオンラインで1〜2回経験を積み、流れを掴んでから家電量販店の店頭案件へ進む。慣れてきたら手配師案件にチャレンジするのがリスクが低く収益も最大化しやすい王道ルートです。手配師案件は信頼できる紹介者経由で探すのが基本。SNS（X等）のMNPコミュニティで実績のある人を探しましょう。
-</div>
-
-<!-- ===== SECTION 2: 4大キャリア出口戦略 ===== -->
-<div class="section-head">
-  <span class="section-num">SECTION 02</span>
-  <p class="section-title">4大キャリア別 出口戦略と最適維持プラン</p>
-</div>
-
-<div class="carriers">
-
-  <!-- docomo -->
-  <div class="carrier-card c-docomo">
-    <div class="carrier-head">
-      <div class="carrier-badge badge-docomo">NTT<br>docomo</div>
-      <div class="carrier-meta">
-        <p class="carrier-name">docomo（ドコモ）</p>
-        <p class="carrier-sub">3社で最も厳格 ／ 維持費を最小化できる</p>
-      </div>
-      <div class="carrier-days">
-        <p class="days-num">211日</p>
-        <p class="days-label">推奨維持期間</p>
-      </div>
-    </div>
-    <div class="carrier-body">
-      <div class="carrier-strategy">
-        <p class="cs-label">最適出口戦略</p>
-        <p class="cs-text"><strong>ドコモmini（4GB）＋ dカードお支払割</strong>のコンボが2026年現在の最強維持プラン。割引適用後は月額<strong>約880円〜1,650円</strong>での維持が可能。irumoは2025年6月に新規受付終了し、後継の「ドコモmini」に移行。内容はほぼ同等で、容量の少ないプランで維持費を極限まで下げて回す。</p>
-      </div>
-      <div class="carrier-rows">
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>契約当日〜翌月：</strong>MNP受取条件のプラン（高額プランを指定されることが多い）で維持。店頭案件では最初の1〜2ヶ月はプラン変更不可の場合があるので必ず確認。</p></div>
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>翌月以降〜211日目まで：</strong>「ドコモmini 4GB」＋dカードお支払割に切り替えてコストを最小化。家族割（みんなドコモ割）やドコモ光セット割も適用できれば月880円台も可能。</p></div>
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>ahamo移行について：</strong>ドコモ回線のままahamoへプラン変更するのはブラックリスト入りしないとされているが、維持費はahamo（2,970円）よりdocomo mini（割引後880円〜）のほうが大幅に安い。ahamo化は推奨しない。</p></div>
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>211日経過後：</strong>MNP転出手続きを実施。ワンストップ対応なのでオンラインから数分で完了。次の乗り換え先に進む。</p></div>
-      </div>
-      <div class="carrier-warn">
-        <strong>⚠️ ブラック注意：</strong>ドコモは3社で最も審査が厳格。180日を超えても現場では211日未満でブラック判定が出た報告が多数。「もう180日経ったから大丈夫」は危険。<strong>211日（7ヶ月）を確実に過ぎてから</strong>転出するのがプロの鉄則。
-      </div>
-      <div class="carrier-footer">
-        <span class="cf-label">MILESTONE</span>
-        <span class="cf-value">211日維持 → ドコモmini最安化 → MNP転出</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- au -->
-  <div class="carrier-card c-au">
-    <div class="carrier-head">
-      <div class="carrier-badge badge-au">au<br>KDDI</div>
-      <div class="carrier-meta">
-        <p class="carrier-name">au（エーユー / KDDI）</p>
-        <p class="carrier-sub">ブランド移行が特に危険 ／ 完走が絶対条件</p>
-      </div>
-      <div class="carrier-days">
-        <p class="days-num">181日</p>
-        <p class="days-label">推奨維持期間</p>
-      </div>
-    </div>
-    <div class="carrier-body">
-      <div class="carrier-strategy">
-        <p class="cs-label">最適出口戦略</p>
-        <p class="cs-text"><strong>「契約したブランドで半年間そのまま完走」</strong>が2026年の新常識。auで契約したらauのまま維持。UQモバイルで契約したらUQのまま。<strong>ブランド間移行（au→UQ、au→povo）は短期解約と同等のリスク</strong>があり即ブラック入りした事例が多発している。</p>
-      </div>
-      <div class="carrier-rows">
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>契約〜180日：</strong>移動・変更は一切しない。UQやpovoへの即移行は特に危険。「同じグループ内だから大丈夫」は誤解で、KDDIブランド間の移行も短期解約と見なされるリスクが高い。</p></div>
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>維持プランの切り替え：</strong>契約時に高額プランを指定された場合でも、条件クリア後は最安プランに変更可能。auなら「マルチデバイスプラン」や低容量プランへの変更でコスト削減を狙う。</p></div>
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>181日経過後：</strong>MNP転出を実施。auのオンライン手続きでワンストップ転出が可能。ただし慎重を期するなら211日まで待つ選択も有効。</p></div>
-      </div>
-      <div class="carrier-warn">
-        <strong>⚠️ ブランド移行は即アウト：</strong>au→UQモバイル、au→povo2.0への即移行が「解約扱い」になりブラックリスト入りするケースが2024〜2026年にかけて激増している。「グループ内だから安全」という認識は捨てること。<strong>契約ブランドで181日完走が鉄則。</strong>
-      </div>
-      <div class="carrier-footer">
-        <span class="cf-label">MILESTONE</span>
-        <span class="cf-value">181日 同ブランドで完走 → MNP転出</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- SoftBank -->
-  <div class="carrier-card c-sb">
-    <div class="carrier-head">
-      <div class="carrier-badge badge-sb">Soft<br>Bank</div>
-      <div class="carrier-meta">
-        <p class="carrier-name">SoftBank（ソフトバンク）</p>
-        <p class="carrier-sub">3ヶ月移行は危険 ／ 最初の3ヶ月は高額プランで実績作り</p>
-      </div>
-      <div class="carrier-days">
-        <p class="days-num">181日</p>
-        <p class="days-label">推奨維持期間</p>
-      </div>
-    </div>
-    <div class="carrier-body">
-      <div class="carrier-strategy">
-        <p class="cs-label">最適出口戦略</p>
-        <p class="cs-text">ソフトバンクからワイモバイル・LINEMOへの番号移行は制度上は翌日でも可能。しかし<strong>2026年現在は「短期解約」の判定が以前より厳しくなっており</strong>、3ヶ月（90日）での移行は「利益目的」とみなされブラック入りした報告が散見される。最初の3ヶ月はメインプラン（ペイトク等）で利用実績を作り、<strong>181日経過後に移行</strong>するのが安全ライン。</p>
-      </div>
-      <div class="carrier-rows">
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>契約〜3ヶ月（1〜90日）：</strong>ペイトクなどメインプランで維持。この期間に「ちゃんと使っている実績」を残すことが次回以降のSB系契約をスムーズにする。</p></div>
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>91〜181日：</strong>条件クリア後に低コストプランへ変更。維持費を下げながら残りの期間を消化する。ワイモバイルやLINEMOへの移行はこの期間はまだ待つ。</p></div>
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>181日経過後：</strong>ワイモバイルまたはLINEMO、もしくは他社へのMNP転出を実施。2026年1月よりオンライン手続きでも一部有料化されたため、手数料の確認を忘れずに。</p></div>
-      </div>
-      <div class="carrier-warn">
-        <strong>⚠️ 注意点：</strong>ソフトバンク・ワイモバイル・LINEMOは同グループ。一度グループ全体でブラック判定が出ると、<strong>SB/YM/LINEMOすべてで数年間契約拒否</strong>になる可能性がある。3ヶ月での移行はリスクが高すぎる。
-      </div>
-      <div class="carrier-footer">
-        <span class="cf-label">MILESTONE</span>
-        <span class="cf-value">3ヶ月で実績作り → 181日で安全転出</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Rakuten -->
-  <div class="carrier-card c-rk">
-    <div class="carrier-head">
-      <div class="carrier-badge badge-rk">Rakuten<br>Mobile</div>
-      <div class="carrier-meta">
-        <p class="carrier-name">楽天モバイル</p>
-        <p class="carrier-sub">MNP弾として最安 ／ 1年以内解約は手数料に注意</p>
-      </div>
-      <div class="carrier-days">
-        <p class="days-num">〜365日</p>
-        <p class="days-label">手数料なし期間</p>
-      </div>
-    </div>
-    <div class="carrier-body">
-      <div class="carrier-strategy">
-        <p class="cs-label">最適出口戦略</p>
-        <p class="cs-text">楽天モバイルは<strong>月額1,078円（3GB以下）〜3,278円（無制限）</strong>という料金体系で、MNP弾（乗り換え用の番号を作る回線）として最安クラス。事務手数料が0円で作りやすい反面、<strong>2025年4月以降は1年以内の解約に1,078円の契約解除料</strong>が一律発生するようになった。解約月は日割り計算なしなので月末に解約するのがコスト最小化のコツ。</p>
-      </div>
-      <div class="carrier-rows">
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>MNP弾として使う場合：</strong>とりあえず1回線開通しておけば、次に高額CB案件が来たときにいつでも使えるMNP弾として機能する。1ヶ月あたり1,078円のコストで弾を維持できる計算。</p></div>
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>ブラックリストのリスク：</strong>楽天は他の3大キャリアよりも審査がやや緩め。1回線の短期解約では即ブラックにはなりにくいが、<strong>同一名義で大量に回線を作って短期解約を繰り返す</strong>とブラック入りのリスクが上がる。散らして使うことが重要。</p></div>
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>三木谷キャンペーンの活用：</strong>三木谷代表のリンク経由で申し込むと最大14,000円相当のポイントが付与される。ポイント付与は契約から2〜4ヶ月後に分割で入るため、ポイント受取完了後に解約するのがベスト。</p></div>
-        <div class="c-row"><div class="c-dot"></div><p class="c-text"><strong>1年未満解約の手数料：</strong>2025年4月以降、1年以内の解約には理由・利用実態に関わらず1,078円の契約解除料が発生。この費用を差し引いてもキャッシュバックのほうが大きければ問題ない。</p></div>
-      </div>
-      <div class="carrier-warn">
-        <strong>⚠️ 注意：</strong>楽天は2025年4月から短期解約ペナルティを強化。楽天一本に頼らず、他のMNP弾（格安SIM等）と組み合わせて使うのが賢明。1キャリアに集中しすぎるとブラックリスト入りのリスクが上がる。
-      </div>
-      <div class="carrier-footer">
-        <span class="cf-label">MILESTONE</span>
-        <span class="cf-value">ポイント受取完了（2〜4ヶ月後）→ 月末解約</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<!-- ===== SECTION 3: タイミング管理 ===== -->
-<div class="section-head">
-  <span class="section-num">SECTION 03</span>
-  <p class="section-title">タイミング管理 — カレンダーで回す4つの鉄則</p>
-</div>
-
-<div class="timing-box">
-  <div class="timing-head">
-    <p class="timing-head-title">🗓 乗り換えカレンダーの組み方</p>
-    <p class="timing-head-sub">これを守れば損はしない</p>
-  </div>
-  <div class="timing-grid">
-    <div class="timing-item">
-      <p class="ti-num">01</p>
-      <p class="ti-label">契約日を必ず記録する</p>
-      <p class="ti-desc">契約当日をDay 0として、推奨維持日数（181日 or 211日）が経過する日をカレンダーにセット。3〜7日前にリマインダーを入れておくと忘れない。</p>
-    </div>
-    <div class="timing-item">
-      <p class="ti-num">02</p>
-      <p class="ti-label">解約は月末に合わせる</p>
-      <p class="ti-desc">楽天モバイルは日割りなしなので月末ギリギリに解約するほど1ヶ月分の節約になる。他キャリアも月末解約で翌月の料金が不要になるケースが多い。</p>
-    </div>
-    <div class="timing-item">
-      <p class="ti-num">03</p>
-      <p class="ti-label">複数回線は日程をずらす</p>
-      <p class="ti-desc">家族の回線も含めて複数回線を管理する場合、契約日をわざとずらすと毎月1回線ずつMNP転出できる「連続収入ルーティン」が作れる。</p>
-    </div>
-    <div class="timing-item">
-      <p class="ti-num">04</p>
-      <p class="ti-label">プラン変更のタイミングを把握</p>
-      <p class="ti-desc">各キャリアのCB受取条件（「初月はプラン変更不可」等）を確認。条件クリア直後に最安プランに切り替えると維持費が最小化できる。月初変更が基本。</p>
-    </div>
-  </div>
-</div>
-
-<!-- ===== SECTION 4: 計算シート ===== -->
-<div class="calc-section">
-  <div class="section-head">
-    <span class="section-num">SECTION 04</span>
-    <p class="section-title">MNP収支計算シート — 1案件ごとに記録する</p>
-  </div>
-
-  <div class="calc-intro">
-    <span class="calc-intro-icon">📋</span>
-    <p class="calc-intro-text">案件ごとに数字を記録しておくことで「本当はいくら儲かったか」が一目でわかる。後から「なぜ赤字になったのか」を分析するためにも、最初から記録する習慣をつけることが重要。1案件ごとに1行で管理するのが基本。</p>
-  </div>
-
-  <!-- 案件基本情報 -->
-  <div class="calc-table-wrap">
-    <div class="calc-table-title"><div class="dot"></div>【基本情報】案件・契約詳細</div>
-    <table>
-      <tr>
-        <th>項目</th>
-        <th>内容</th>
-        <th>メモ</th>
-      </tr>
-      <tr>
-        <td>案件No.</td>
-        <td><span class="input-cell">例：案件001</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">自分で番号を振って管理</td>
-      </tr>
-      <tr>
-        <td>乗り換え先キャリア</td>
-        <td><span class="input-cell">例：docomo</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">docomo / au / SB / 楽天 etc.</td>
-      </tr>
-      <tr>
-        <td>入り口（申込先）</td>
-        <td><span class="input-cell">例：ヨドバシカメラ</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">オンライン / 量販店 / 手配師</td>
-      </tr>
-      <tr>
-        <td>契約プラン</td>
-        <td><span class="input-cell">例：ドコモmax</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">初期契約時のプラン名を記録</td>
-      </tr>
-      <tr>
-        <td>乗り換え用番号（MNP弾）</td>
-        <td><span class="input-cell">例：楽天モバイル</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">どのキャリアの番号を使ったか</td>
-      </tr>
-      <tr>
-        <td>契約日</td>
-        <td><span class="input-cell">例：2026/05/01</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">必ず当日中に記録する</td>
-      </tr>
-      <tr>
-        <td>推奨解約日（目安）</td>
-        <td><span class="input-cell">例：2026/11/28</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">211日後 or 181日後の日付</td>
-      </tr>
-      <tr>
-        <td>実際の解約日</td>
-        <td><span class="input-cell">記入欄</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">解約完了後に記入</td>
-      </tr>
-      <tr>
-        <td>維持日数</td>
-        <td><span class="input-cell">自動計算欄</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">解約日 − 契約日 = 日数</td>
-      </tr>
-    </table>
-  </div>
-
-  <!-- 収入の部 -->
-  <div class="calc-table-wrap">
-    <div class="calc-table-title"><div class="dot"></div>【収入の部】もらえるお金・ポイント</div>
-    <table>
-      <tr>
-        <th>収入項目</th>
-        <th>金額（円）</th>
-        <th>受取時期 / 備考</th>
-      </tr>
-      <tr>
-        <td>キャッシュバック（現金）</td>
-        <td><span class="input-cell">¥000,000</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">振込時期・条件を記録</td>
-      </tr>
-      <tr>
-        <td>ポイント還元（CB）</td>
-        <td><span class="input-cell">¥000,000</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">PayPay / 楽天 / dポイント等</td>
-      </tr>
-      <tr>
-        <td>入会ボーナスポイント</td>
-        <td><span class="input-cell">¥0,000</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">クレカ入会特典等も含む</td>
-      </tr>
-      <tr>
-        <td>端末下取り・売却益</td>
-        <td><span class="input-cell">¥0,000</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">端末を受け取った場合の売値</td>
-      </tr>
-      <tr>
-        <td>紹介キャンペーン</td>
-        <td><span class="input-cell">¥0,000</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">三木谷リンク等の紹介ポイント</td>
-      </tr>
-      <tr class="calc-sum-row">
-        <td>収入合計</td>
-        <td colspan="2"><span class="sum-val">¥ ______</span></td>
-      </tr>
-    </table>
-  </div>
-
-  <!-- 支出の部 -->
-  <div class="calc-table-wrap">
-    <div class="calc-table-title"><div class="dot"></div>【支出の部】かかった費用</div>
-    <table>
-      <tr>
-        <th>支出項目</th>
-        <th>金額（円）</th>
-        <th>内訳 / 備考</th>
-      </tr>
-      <tr>
-        <td>維持通信費（合計）</td>
-        <td><span class="input-cell">¥0,000</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">月額 × 維持ヶ月数で計算</td>
-      </tr>
-      <tr>
-        <td>　└ 初期プラン月額</td>
-        <td><span class="input-cell">¥0,000 × ○ヶ月</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">CB受取条件期間中のプラン料</td>
-      </tr>
-      <tr>
-        <td>　└ 格安プラン月額</td>
-        <td><span class="input-cell">¥0,000 × ○ヶ月</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">切り替え後の維持費</td>
-      </tr>
-      <tr>
-        <td>MNP弾の維持費</td>
-        <td><span class="input-cell">¥0,000</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">楽天等の転出元の費用</td>
-      </tr>
-      <tr>
-        <td>楽天解約手数料</td>
-        <td><span class="input-cell">¥0 or ¥1,078</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">1年以内解約の場合に発生</td>
-      </tr>
-      <tr>
-        <td>交通費（来店した場合）</td>
-        <td><span class="input-cell">¥0,000</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">量販店・ショップへの往復交通費</td>
-      </tr>
-      <tr>
-        <td>事務手数料</td>
-        <td><span class="input-cell">¥0,000</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">店舗手続きの場合は3,850円等</td>
-      </tr>
-      <tr>
-        <td>その他（端末費・オプション等）</td>
-        <td><span class="input-cell">¥0,000</span></td>
-        <td style="font-size:11px;color:var(--text-muted);">条件達成に必要な費用</td>
-      </tr>
-      <tr class="calc-sum-row">
-        <td>支出合計</td>
-        <td colspan="2"><span class="sum-val">¥ ______</span></td>
-      </tr>
-    </table>
-  </div>
-
-  <!-- 純利益 -->
-  <div class="profit-box">
-    <div class="profit-head"><div class="dot"></div>【純利益】1案件の最終結果</div>
-    <div class="profit-row">
-      <span class="pr-label">収入合計</span>
-      <span class="pr-val green">＋ ¥ ______</span>
-    </div>
-    <div class="profit-row">
-      <span class="pr-label">支出合計</span>
-      <span class="pr-val red">－ ¥ ______</span>
-    </div>
-    <div class="profit-row">
-      <span class="pr-label">実質CB受取額（ポイント→円換算）</span>
-      <span class="pr-val">¥ ______</span>
-    </div>
-    <div class="profit-row">
-      <span class="pr-label">1ヶ月あたりの利益（維持期間で割る）</span>
-      <span class="pr-val">¥ ______</span>
-    </div>
-    <div class="profit-total">
-      <span class="pt-label">🏆 純利益（1案件）</span>
-      <span class="pt-val">¥ ______</span>
-    </div>
-  </div>
-
-  <!-- 注意ヒント -->
-  <div class="tips-grid">
-    <div class="tip-card">
-      <div class="tip-icon">📊</div>
-      <p class="tip-title">複数案件の合計管理</p>
-      <p class="tip-text">案件Noをつけてシートを積み上げていくと「今月の合計収入」が自動的に出る。月10万円超を目指すなら同時に3〜5案件を並走させるイメージで。</p>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">⏰</div>
-      <p class="tip-tip-title">CB受取期限を必ず確認</p>
-      <p class="tip-text">キャッシュバックには「申し込みから○ヶ月以内に手続き」という期限がある場合がある。契約時にCB受取の条件・手順・期限をスクショして保存しておく。</p>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">💳</div>
-      <p class="tip-title">ポイントの換金率に注意</p>
-      <p class="tip-text">PayPayポイント・楽天ポイント・dポイントは現金換算が1ポイント＝1円が基本だが、使い方によって価値が下がることもある。換金ルートを事前に確認。</p>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">📱</div>
-      <p class="tip-title">乗り換え用番号の台帳管理</p>
-      <p class="tip-text">MNP弾として使う番号・SIMは「どのキャリアで・何日目か・次の利用予定」を一覧表で管理する。弾が枯渇すると案件に申し込めなくなるので早めに補充。</p>
-    </div>
-  </div>
-</div>
-
-<!-- ===== FINAL NOTE ===== -->
-<div class="final-note">
-  <p class="fn-eyebrow">CONCLUSION</p>
-  <p class="fn-title">入り口を制す者が、<br><span class="acc">MNPの出口戦略を制す。</span></p>
-  <p class="fn-msg">
-    同じ乗り換えでも、オンラインと量販店・手配師案件では数倍の差が生まれる。<br>
-    そして正しい維持期間（docomo 211日、au・SB 181日）を守ることで、<br>
-    ブラックリストのリスクをゼロにしながら繰り返し収入を作れる。<br><br>
-    難しいことは何もない。記録して、管理して、繰り返す。<br>
-    それだけで月10万円の仕組みが出来上がる。
-  </p>
-</div>
-
-</div>
 </body>
 </html>
